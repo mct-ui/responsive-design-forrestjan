@@ -180,6 +180,26 @@ a:focus {
 /*------------------------------------*\
   #OBJECTS
 \*------------------------------------*/
+.o-section {
+    display: flow-root;
+}
+
+.o-section + .o-section {
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .o-section--lg + .o-section--lg,
+    .o-section--xl + .o-section--xl {
+        margin-top: 48px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .o-section--xl + .o-section--xl {
+        margin-top: 72px;
+    }
+}
 
 /*
     Objects: List
@@ -486,6 +506,8 @@ a:focus {
 
 .u-flex-basis-auto {
   flex-basis: auto !important;
+  display: flex;
+  justify-content: space-evenly ;
 }
 
 .u-flex-grow-1 {
@@ -679,7 +701,11 @@ a:focus {
     flex-basis: calc(100% / 6 * 5) !important;
   }
 }
+/*utilities spacing*/
 
+.u-pt-clear{
+    padding-top: 0 !important;
+}
 /*------------------------------------*\
   #MEDIA
 \*------------------------------------*/
@@ -691,6 +717,20 @@ a:focus {
     These examples override the primary ('mobile first') styles.
     USE THEM INLINE!
 */
+@media (min-width: 768px){
+    .o-row{
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    .o-row--md{
+        padding-top: 48px;
+        padding-bottom: 24px;
+    }
+    .o-row--lg{
+        padding-top: 72px;
+        padding-bottom: 48px;
+    }
+}
 
 /* Extra small devices (portrait phones, less than 576px)
    No media query since this is the default in mobile first design
